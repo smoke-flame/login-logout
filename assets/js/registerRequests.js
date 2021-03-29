@@ -19,12 +19,9 @@ registerBtn.addEventListener('click', async function(event) {
             tel: telInput.value,
             pass: passwordInput.value
         };
-
-        let body = JSON.stringify(data);
-        let url = '/post';
-        let response = await fetch(url, {
+        let response = await fetch('http://localhost:3000/post', {
                 method: 'POST',
-                body,
+                body : JSON.stringify(data),
                 headers: {
                     'Content-Type': 'application/json'
                 }

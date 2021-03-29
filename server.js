@@ -1,20 +1,34 @@
 const express = require('express');
 
 const bodyParser = require("body-parser");
-const urlencodedParser = bodyParser.urlencoded({extended: false});
 
 const app = express();
 
 app.use(express.static(__dirname + '/assets/css'));
+app.use(bodyParser.json())
 
 
 const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database(':memory:');
 
 db.serialize(function() {
-    db.run("CREATE TABLE registered_users (info TEXT)");
+    db.run("CREATE TABLE IF NOT EXISTS registered_users('id' INTEGER NOT NULL PRIMARY KEY, name TEXT, email TEXT, mobile TEXT, password TEXT, register_date DATETIME)");
 
 })
+let counter = 0;
+
+
+//////////////////////  queryes 
+
+app.post('/post', async (req, res) => {
+    counter++;
+    let data = req.body;
+    console.log(data);
+    db.run(`INSERT INTO registered_users ('id', name, email, mobile, password, register_date)
+     VALUES ('${counter}', '${data.name}', '${data.email}', '${data.tel}', '${data.pass}', '${new Date()}')`);
+    res.send(JSON.stringify('sucess'));
+});
+
 
 /////////////////// pages
 
@@ -39,12 +53,7 @@ app.get('/success', (req, res) => {
 });
 
 
-//////////////////////  queryes 
 
-app.post('/post', urlencodedParser, (req, res) => {
-    console.log(req.body);
-    res.send(JSON.stringify('sucess'))
-});
 
 
 //////////////////////// docs
