@@ -1,0 +1,214 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+html {
+  font-size: 10px;
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: url(../img/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.container__success {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.form-wrapper {
+  width: 100%;
+  border-radius: 5px;
+  max-width: 500px;
+  background-color: #fefefe;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #707070;
+}
+
+.form {
+  width: 100%;
+  background-color: #fefefe;
+}
+
+.form-messages {
+  position: absolute;
+  width: 50%;
+  margin: 0 auto;
+  top: 3%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.form-messages__item {
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #707070;
+  opacity: 0;
+  -webkit-transition: all 0.7s linear;
+  transition: all 0.7s linear;
+}
+
+.form-messages__item.active {
+  opacity: 1;
+}
+
+.form-messages__item.error-message {
+  border: 1px solid #DB5252;
+  background-color: #EF7575;
+}
+
+.form-messages__item.success-message {
+  background-color: #5FDF9E;
+  border: 1px solid #49CF8B;
+}
+
+.form__title {
+  text-align: center;
+  color: #444444;
+  font-size: 2rem;
+}
+
+.form__main {
+  padding: 25px 20px;
+}
+
+.form__row {
+  width: 100%;
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form__row__label {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #444444;
+}
+
+.form__row__input {
+  padding: 1rem 0 1rem 0.5rem;
+  width: 100%;
+  border: 1px solid #e8eced;
+  border-radius: 2px;
+  outline: none;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.form__row__input:focus {
+  -webkit-box-shadow: 0px 0px 0px 5px #f2f8fc;
+          box-shadow: 0px 0px 0px 5px #f2f8fc;
+  border: 1px solid #B7D4EA;
+}
+
+.form__footer {
+  background-color: #f0f5f8;
+  padding: 4rem 0;
+  border-top: 1px solid #DDE0E8;
+}
+
+.form__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form__buttons__item {
+  width: 35%;
+  padding: 1rem 0;
+  border-radius: 20px;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #86C7E9;
+  border: 2px solid #707070;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.form__buttons__item:hover {
+  background-color: #fff;
+  color: #86C7E9;
+  border: 2px solid #fff;
+  font-weight: 700;
+}
+
+.success__title {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.success__message {
+  margin-top: 100px;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.success__message__btn {
+  width: 10%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+/*# sourceMappingURL=style.css.map */

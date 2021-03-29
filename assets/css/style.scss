@@ -1,0 +1,196 @@
+//vars
+$grey: #444444;
+$white: #fff;
+$background-color: #eaeff0;
+$footer-color: #f0f5f8;
+$border-color: #e8eced;
+$form-bg: #fefefe;
+
+//styles
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-size: 10px;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    &__success {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+}
+
+.form-wrapper {
+    width: 100%;
+    border-radius: 5px;
+    max-width: 500px;
+    background-color: $form-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #707070;
+}
+
+.form {
+    width: 100%;
+    background-color: $form-bg;
+
+    &-messages {
+        position: absolute;
+        width: 50%;
+        margin: 0 auto;
+        top: 3%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &__item {
+            padding: 20px 0;
+            width: 100%;
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #707070;
+            opacity: 0;
+            transition: all 0.7s linear;
+
+            &.active {
+                opacity: 1;
+            }
+
+            &.error-message {
+
+                border: 1px solid #DB5252;
+                background-color: #EF7575;
+            }
+
+            &.success-message {
+
+                background-color: #5FDF9E;
+                border: 1px solid #49CF8B;
+
+            }
+        }
+    }
+
+
+    &__title {
+        text-align: center;
+        color: $grey;
+        font-size: 2rem;
+    }
+
+    // padding: 25px 20px;
+    &__main {
+        padding: 25px 20px;
+    }
+
+    &__row {
+        width: 100%;
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: column;
+
+        &__label {
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 1.8;
+            color: $grey;
+        }
+
+        &__input {
+            padding: 1rem 0 1rem 0.5rem;
+            width: 100%;
+            border: 1px solid $border-color;
+            border-radius: 2px;
+            outline: none;
+            transition: all 0.2s linear;
+            font-size: 1.4rem;
+            font-weight: 300;
+
+            &:focus {
+                box-shadow: 0px 0px 0px 5px rgba(#F2F8FC, 1);
+                border: 1px solid #B7D4EA;
+            }
+        }
+    }
+
+    &__footer {
+        background-color: $footer-color;
+        padding: 4rem 0;
+        border-top: 1px solid #DDE0E8;
+    }
+
+    &__buttons {
+        // margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+
+        &__item {
+            width: 35%;
+            padding: 1rem 0;
+            border-radius: 20px;
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: $white;
+            background-color: #86C7E9;
+            border: 2px solid #707070;
+            box-shadow: 0 2px 3px rgba(#000000, 0.23);
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s linear;
+
+            &:hover {
+                background-color: $white;
+                color: #86C7E9;
+                border: 2px solid $white;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.success {
+    &__title {
+        width: 100%;
+        margin-top: 50px;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    &__message {
+        margin-top: 100px;
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 2rem;
+
+        &__btn {
+            width: 10%;
+            display: block;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+    }
+}
