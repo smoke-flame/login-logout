@@ -1,44 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="assets/js/redirect.js"></script>
-</head>
-<body>
-    <div class="form-messages"></div>
-    <div class="container">        
-        <div class="form-wrapper">          
-            <form action="#" class="form">
-                <div class="form__main">
-                    <h1 class="form__title">Login panel</h1>
-                    <div class="form__row">
-                        <label for="login-email" class="form__row__label">Email:</label>
-                        <input id="login-email" type="email" class="form__row__input">
-                    </div>
-                    <div class="form__row">
-                        <label for="login-password" class="form__row__label">Password:</label>
-                        <input id="login-password" type="password" class="form__row__input">
-                    </div>
-                </div>
-                <div class="form__footer">
-                    <div class="form__buttons">
-                        <button id="login" class="form__buttons__item" type="submit">Login</button>
-                        <button id="to-register" class="form__buttons__item">Register</button>
-                    </div>
-                </div>
-                
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./assets/js/login/redirect.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="message"></div>
+      <div class="wrapper">
+        <div class="company-info">
+          <h2 class="company-info__title">Company name</h2>
+          <p class="company-info__subtitle">
+            Sign in to your account to continue using this website
+          </p>
 
-            </form>
+          <p class="company-info__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+            corrupti sed molestias rerum eius optio, eligendi, nulla ut
+            explicabo in non ea sit impedit! Officiis eaque aspernatur nesciunt.
+            Necessitatibus, dicta?
+          </p>
+
+          <p class="company-info__tagline">Tagline</p>
         </div>
+        <form action="#" class="form form--login">
+          <div class="form__row">
+            <div class="form__row__item">
+              <label class="form__row__item__label" for="login-email"
+                >Email adress</label
+              >
+              <input
+                class="form__row__item__input"
+                type="email"
+                placeholder="Enter your email adress"
+                id="login-email"
+              />
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="form__row__item">
+              <label class="form__row__item__label" for="login-password"
+                >Password</label
+              >
+              <input
+                class="form__row__item__input"
+                type="password"
+                placeholder="Enter your password"
+                id="login-password"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+
+          <div class="form__row">
+            <button type="submit" id="login" class="form__row__button">
+              Login to my account
+            </button>
+          </div>
+
+          <div class="form__row">
+            <p class="form__row__login">
+              Don't have an account yet?
+              <a class="form__row__login__link" href="/">Register</a> now
+            </p>
+          </div>
+        </form>
+      </div>
     </div>
-    <script src="assets/js/index.js" defer></script>
+
+    <script src="./assets/js/createDb.js" defer></script>
+    <script src="./assets/js/login/loginRequests.js" defer></script>
     <script src="assets/js/message.js" defer></script>
-    <script src="assets/js/loginRequests.js" defer></script>
-</body>
+  </body>
 </html>

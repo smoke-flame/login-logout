@@ -17,7 +17,6 @@ loginBtn.addEventListener('click', event => {
     event.preventDefault();
     if(loginEmail.value && loginPassword.value){
 
-        let canLogin = false;
 
         db.transaction(function (tx) {
 
@@ -34,7 +33,6 @@ loginBtn.addEventListener('click', event => {
                     }
                 })
 
-                console.log(canLogin);
                 if(canLogin) {
 
                     createMessage('You have successfully logged into your account', 'success');

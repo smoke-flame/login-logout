@@ -1,53 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="form-messages"></div>
-    <div class="container">     
-        <div class="form-wrapper">           
-            <form id="form" action="#" class="form">
-                <div class="form__main">
-                    <h1 class="form__title"> Register panel</h1>
-                    <div class="form__row">
-                        <label for="input-name" class="form__row__label">Name:</label>
-                        <input id="input-name" type="text" class="form__row__input" autocomplete="off">
-                    </div>
-                    
-                    <div class="form__row">
-                        <label for="input-email" class="form__row__label">Email:</label>
-                        <input id="input-email" type="email" class="form__row__input" autocomplete="off">
-                    </div>
-                    <div class="form__row">
-                        <label for="input-tel" class="form__row__label">Mobile number:</label>
-                        <input id="input-tel" type="tel" class="form__row__input" autocomplete="off">
-                    </div>
-                    <div class="form__row">
-                        <label for="input-password" class="form__row__label">Password:</label>
-                        <input id="input-password" type="password" class="form__row__input" autocomplete="off">
-                    </div>
-                </div>
-                <div class="form__footer">
-                    <div class="form__buttons">
-                        <button id="register" class="form__buttons__item" type="submit">Register</button>
-                        <button id="to-login" class="form__buttons__item">Login</button>
-                    </div>
-                </div>
-                
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+     -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="message"></div>
+      <div class="wrapper">
+        <div class="company-info">
+          <h2 class="company-info__title">Company name</h2>
+          <p class="company-info__subtitle">
+            Your free account in a couple of clicks
+          </p>
 
-            </form>
+          <p class="company-info__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+            corrupti sed molestias rerum eius optio, eligendi, nulla ut
+            explicabo in non ea sit impedit! Officiis eaque aspernatur nesciunt.
+            Necessitatibus, dicta?
+          </p>
+
+          <p class="company-info__tagline">Tagline</p>
         </div>
+        <form action="#" class="form">
+          <div class="form__row">
+            <div class="form__row__col">
+              <label class="form__row__col__label" for="name">First name</label>
+              <input
+                class="form__row__col__input"
+                type="text"
+                placeholder="Enter your first name"
+                id="name"
+              />
+            </div>
+            <div class="form__row__col">
+              <label class="form__row__col__label" for="name"
+                >Second name</label
+              >
+              <input
+                class="form__row__col__input"
+                type="text"
+                placeholder="Enter your second name"
+                id="surname"
+              />
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="form__row__item">
+              <label class="form__row__item__label" for="email"
+                >Email adress</label
+              >
+              <input
+                class="form__row__item__input"
+                type="email"
+                placeholder="Enter your email adress"
+                id="email"
+              />
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="form__row__item">
+              <label class="form__row__item__label" for="number"
+                >Phone number</label
+              >
+              <input
+                class="form__row__item__input"
+                type="tel"
+                placeholder=" Enter your phone number"
+                id="number"
+              />
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="form__row__item">
+              <label class="form__row__item__label" for="password"
+                >Password</label
+              >
+              <input
+                class="form__row__item__input"
+                type="password"
+                placeholder="Enter your password"
+                id="password"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+
+          <div class="form__row">
+            <p class="form__row__text">
+              * The password must contain letters, must not start with a number,
+              must not contain special characters and must be at least 8
+              characters long.
+            </p>
+          </div>
+
+          <div class="form__row">
+            <button type="submit" class="form__row__button" id="register">
+              Create your free account
+            </button>
+          </div>
+
+          <div class="form__row">
+            <p class="form__row__login">
+              Already have an account? Please
+              <a class="form__row__login__link" href="login">login</a>
+            </p>
+          </div>
+        </form>
+      </div>
     </div>
-    <script src="assets/js/index.js" defer></script>
+    <script src="./assets/js/createDb.js" defer></script>
+    <script src="./assets/js/register/registerRequests.js" defer></script>
+    <script src="./assets/js/register/registerValidation.js" defer></script>
     <script src="assets/js/message.js" defer></script>
-    <script src="assets/js/registerValidation.js" defer></script>
-    <script src="assets/js/registerRequests.js" defer></script>
-</body>
+
+  </body>
 </html>

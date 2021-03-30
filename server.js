@@ -41,11 +41,20 @@ app.get('/assets/css/style.css', (req, res) => {
 
 // js files
 app.get('/assets/js/:name', (req, res) => {
-    res.sendFile( `${__dirname}/assets/js/${req.params.name}`);
+    res.sendFile(`${__dirname}/assets/js/${req.params.name}`);
+})
+app.get('/assets/js/login/:name', (req, res) => {
+    res.sendFile(`${__dirname}/assets/js/login/${req.params.name}`);
+})
+app.get('/assets/js/register/:name', (req, res) => {
+    res.sendFile(`${__dirname}/assets/js/register/${req.params.name}`);
 })
 
 // images
 app.get('/assets/img/:name', (req, res) => {
-    res.sendFile( `${__dirname}/assets/img/${req.params.name}`);
+    res.sendFile(`${__dirname}/assets/img/${req.params.name}`);
+})
+app.get('/assets/img/check-marks/:name', (req, res) => {
+    res.sendFile(`${__dirname}/assets/img/check-marks/${req.params.name}`);
 })
 app.listen(3000)
