@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="assets/js/redirect.js"></script>
 </head>
 <body>
     <div class="form-messages"></div>
@@ -17,12 +18,12 @@
                 <div class="form__main">
                     <h1 class="form__title">Login panel</h1>
                     <div class="form__row">
-                        <label for="input-email" class="form__row__label">Email:</label>
-                        <input id="input-email" type="email" class="form__row__input">
+                        <label for="login-email" class="form__row__label">Email:</label>
+                        <input id="login-email" type="email" class="form__row__input">
                     </div>
                     <div class="form__row">
-                        <label for="input-password" class="form__row__label">Password:</label>
-                        <input id="input-password" type="password" class="form__row__input">
+                        <label for="login-password" class="form__row__label">Password:</label>
+                        <input id="login-password" type="password" class="form__row__input">
                     </div>
                 </div>
                 <div class="form__footer">
@@ -36,7 +37,8 @@
             </form>
         </div>
     </div>
-    <script src="assets/js/index.js"></script>
-    <script src="assets/js/loginRequests.js"></script>
+    <script src="assets/js/index.js" defer></script>
+    <script src="assets/js/message.js" defer></script>
+    <script src="assets/js/loginRequests.js" defer></script>
 </body>
 </html>
