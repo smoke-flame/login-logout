@@ -2,7 +2,6 @@ const registerBtn = document.getElementById('register');
 const toLoginBtn = document.getElementById('to-login');
 
 
-
 toLoginBtn.addEventListener('click', event => {
     event.preventDefault();
     window.location.href = 'login';

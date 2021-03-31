@@ -23,9 +23,9 @@ app.get('/login', (req, res) => {
 
 
 //success page
-app.get('/success', (req, res) => {
+app.get('/admin', (req, res) => {
     res.set('Content-Type', 'text/html');
-    res.sendFile(__dirname + '/success-login.html');
+    res.sendFile(__dirname + '/admin-panel.html');
 });
 
 
@@ -34,9 +34,9 @@ app.get('/success', (req, res) => {
 
 //////////////////////// docs
 // styles
-app.get('/assets/css/style.css', (req, res) => {
+app.get('/assets/css/:name', (req, res) => {
     res.set('Content-Type', 'text/css');
-    res.sendFile(__dirname + '/assets/css/style.css');
+    res.sendFile(__dirname + `/assets/css/${req.params.name}`);
 })
 
 // js files
@@ -53,8 +53,11 @@ app.get('/assets/js/register/:name', (req, res) => {
 // images
 app.get('/assets/img/:name', (req, res) => {
     res.sendFile(`${__dirname}/assets/img/${req.params.name}`);
-})
+});
 app.get('/assets/img/check-marks/:name', (req, res) => {
     res.sendFile(`${__dirname}/assets/img/check-marks/${req.params.name}`);
+});
+app.get('/assets/img/icons/:name', (req, res) => {
+    res.sendFile(`${__dirname}/assets/img/icons/${req.params.name}`);
 })
 app.listen(3000)

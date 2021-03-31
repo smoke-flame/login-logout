@@ -38,7 +38,7 @@ loginBtn.addEventListener('click', event => {
                     createMessage('You have successfully logged into your account', 'success');
 
                     setTimeout( () => {
-                        window.location.href = 'success';
+                        window.location.href = 'admin';
                     }, 2000)
 
                 } else {

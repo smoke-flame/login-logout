@@ -1,6 +1,6 @@
 let item = localStorage.getItem('email');
 
-if(item) {
+if (item) {
     body.write = '';
-    window.location.href= 'success';
-} 
+    window.location.href = 'admin';
+}
