@@ -185,6 +185,9 @@ Highcharts.chart('card-3', {
     credits: {
         enabled: false,
     },
+    tooltip: {
+        enabled: false,
+    },
 
     yAxis: {
         title: {
