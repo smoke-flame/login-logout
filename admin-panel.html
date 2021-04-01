@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/panel.css" />
-    <!-- <script src="./assets/js/closeSuccess.js"></script> -->
+    <script src="assets/js/closeSuccess.js"></script>
   </head>
   <body>
     <div class="container">
@@ -722,7 +722,17 @@
                   <img src="assets/img/icons/envelope.png" alt="envelope" />
                 </div>
                 <div class="header__user__photo">
-                  <img src="assets/img/icons/camera.png" alt="photo" />
+                  <img src="assets/img/icons/user.jpg" alt="photo" />
+                  <div class="header__user__photo__menu">
+                    <nav class="header__user__photo__menu__nav">
+                      <a href="#" class="header__user__photo__menu__nav__link">Menu&nbsp;item</a>
+                      <a href="#" class="header__user__photo__menu__nav__link">Menu&nbsp;item</a>
+                      <a href="#" class="header__user__photo__menu__nav__link">Menu&nbsp;item</a>
+                      <a href="#" class="header__user__photo__menu__nav__link">Menu&nbsp;item</a>
+                      <a href="#" class="header__user__photo__menu__nav__link">Menu&nbsp;item</a>
+                      <a href="#" class="header__user__photo__menu__nav__link success__btn">Log&nbsp;out</a>
+                    </nav>
+                  </div>
                 </div>
                 <div class="header__user__customization">
                   <img src="assets/img/icons/gear.png" alt="gear" />
@@ -766,7 +776,21 @@
                   </div>
                 </div>
 
-                <div class="dashboard__history__canvas"></div>
+                <div class="dashboard__history__canvas">
+                  <div class="dashboard__history__canvas__panel">
+                    <div class="dashboard__history__canvas__panel__time">
+                      <div class="dashboard__history__canvas__panel__time__item active">DAILY</div>
+                      <div class="dashboard__history__canvas__panel__time__item">WEEKLY</div>
+                      <div class="dashboard__history__canvas__panel__time__item">MONTHLY</div>
+                      <div class="dashboard__history__canvas__panel__time__item">YEARLY</div>
+                    </div>
+                    <div class="dashboard__history__canvas__panel__icons">
+                      <div class="dashboard__history__canvas__panel__icons__online">Online</div>
+                      <div class="dashboard__history__canvas__panel__icons__store">Store</div>
+                    </div>
+                  </div>
+                  <div id="container"></div>
+                </div>
               </div>
               <div class="dashboard__history__cards">
                 <div class="dashboard__history__cards__item">
@@ -938,7 +962,9 @@
             </div>
             <div class="dashboard__traffic">
               <h2 class="dashboard__traffic__title">Traffic</h2>
-              <div class="dashboard__traffic__item"></div>
+              <div class="dashboard__traffic__item">
+                <div id="container1"></div>
+              </div>
               <div class="dashboard__traffic__cards">
                 <div class="dashboard__traffic__cards__item">
                   <div class="dashboard__traffic__cards__item__percent">33 <span>%</span></div>
@@ -961,7 +987,11 @@
             <div class="dashboard__card dashboard__card--purple">
               <h5 class="dashboard__card__title">Revinue Status</h5>
               <div class="dashboard__card__inner">
-                <div class="dashboard__card__graph">graph</div>
+                <div class="dashboard__card__graph">
+
+                  <div id="card-1"></div>               
+
+                </div>
                 <div class="dashboard__card__balance">
                   <div class="dashboard__card__balance__amount"><span>$</span> 432</div>
                   <div class="dashboard__card__balance__period">Jan 01 - Jan 10</div>
@@ -972,6 +1002,12 @@
               <h5 class="dashboard__card__title">Page View</h5>
               <div class="dashboard__card__inner dashboard__card__inner--margin">
                 <div class="dashboard__card__amount"><span>$</span> 432</div>
+                
+              </div>
+              <div class="dashboard__card__graph">
+
+                <div id="card-2"></div>               
+
               </div>
             </div>
           </div>
@@ -986,19 +1022,23 @@
                       <option class="dashboard__card__amount__select__item__option" value="monthly">monthly</option>
                       <option value="monthly">quarterly</option>
                       <option value="monthly">annually</option>
-                    </select>
+                    </select>                    
                   </div>
 
                 </div>
 
-                <div class="dashboard__card__graph dashboard__card__graph--all">graph</div>
+                <div class="dashboard__card__graph dashboard__card__graph--all">
+                 <div id="card-3"></div>
+                </div>
               </div>
 
             </div>
             <div class="dashboard__card dashboard__card--orange dashboard__card--last">
               <h5 class="dashboard__card__title">Revinue Status</h5>
               <div class="dashboard__card__inner">
-                <div class="dashboard__card__graph">graph</div>
+                <div class="dashboard__card__graph">
+                  <div id="card-4"></div>  
+                </div>
                 <div class="dashboard__card__balance">
                   <div class="dashboard__card__balance__amount"><span>$</span> 432</div>
                   <div class="dashboard__card__balance__period">Jan 01 - Jan 10</div>
@@ -1336,10 +1376,20 @@
         </div>
       </div>
     </div>
-    <script src="./assets/js/createDb.js" defer></script>
-    <!-- <script src="assets/js/logout.js" defer></script> -->
-    <script src="assets/js/message.js" defer></script>
 
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+  <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src="assets/js/graphs.js" defer></script>
+    <script src="./assets/js/createDb.js" defer></script>
+    <script src="assets/js/logout.js" defer></script>
+    <script src="assets/js/message.js" defer></script>
+    <script src="assets/js/sidebar.js" defer></script>
     <script src="assets/js/adaptiveAdmin.js" defer></script>
+
+
   </body>
 </html>
